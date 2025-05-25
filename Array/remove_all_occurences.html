@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const num=  [0,1,2,2,3,0,4,2]
+        function removeAllOccurences(num,val){
+            let k=0;
+            for(let i=0;i<num.length;i++){
+                if(num[i] !== val){
+                    num[k]= num[i];
+                    k++;
+                } 
+            }
+            return k;
+        }
+
+        const res =removeAllOccurences(num,2);
+        console.log(res)
+        console.log("updated nums",num.slice(0,res))
+    </script>
+</body>
+</html>
